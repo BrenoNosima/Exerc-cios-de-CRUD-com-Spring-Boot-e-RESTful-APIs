@@ -1,21 +1,21 @@
-package com.bn.atvdjava.entities;
+package com.bn.atvdjava.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
-public class Livro {
+@Table(name = "tb_aluno")
+public class LivroModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "titulo")
     private String titulo;
+    @Column(name = "autor")
     private String autor;
     private Integer anoPublicacao;
 
-    public Livro() {
+    public LivroModel() {
     }
 
     public Long getId() {
